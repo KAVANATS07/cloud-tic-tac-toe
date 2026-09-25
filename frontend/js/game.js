@@ -1,3 +1,4 @@
+const API_BASE_URL = "https://cloud-tic-tac-toe-1.onrender.com";
 const cells = document.querySelectorAll(".cell");
 const statusText = document.getElementById("status");
 const newGameButton = document.getElementById("new-game");
@@ -15,7 +16,7 @@ let lastWinner = null;
 // Join the game
 async function joinGame() {
     try {
-        const response = await fetch("http://localhost:5000/join", {
+        const response = await fetch(API_BASE_URL + "/join", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -52,9 +53,9 @@ async function joinGame() {
 // Get game state
 async function loadGame() {
     try {
-        const response = await fetch(
-            "http://localhost:5000/game"
-        );
+    const response = await fetch(
+        API_BASE_URL + "/game"
+    );
 
         const game = await response.json();
 
@@ -77,7 +78,7 @@ async function makeMove(position) {
     }   
     try {
         const response = await fetch(
-            "http://localhost:5000/move",
+            API_BASE_URL + "/move",
             {
                 method: "POST",
                 headers: {
@@ -113,7 +114,7 @@ async function resetGame() {
 
     try {
         const response = await fetch(
-            "http://localhost:5000/reset",
+            API_BASE_URL + "/reset",
             {
                 method: "POST"
             }
