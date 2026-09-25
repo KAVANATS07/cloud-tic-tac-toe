@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cloud Tic-Tac-Toe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f172a">
+<meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+
+    <main class="game-container">
+
+        <header class="game-header">
+            <p class="cloud-label">☁️ CLOUD GAME</p>
+            <h1>Tic-Tac-Toe</h1>
+            <p class="subtitle">Multiplayer Cloud Edition</p>
+        </header>
+
+
+        <section class="player-info">
+
+            <div class="player-card active">
+                <span class="player-symbol">X</span>
+                <div>
+                    <h2>Player X</h2>
+                    <p id="x-score">Wins: 0</p>
+                </div>
+            </div>
+
+            <div class="vs">VS</div>
+
+            <div class="player-card">
+                <span class="player-symbol">O</span>
+                <div>
+                    <h2>Player O</h2>
+                    <p id="o-score">Wins: 0</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="game-status">
+            <p id="status">Player X's turn</p>
+        </section>
+
+
+        <section class="board" id="board">
+
+            <button class="cell" data-position="0"></button>
+            <button class="cell" data-position="1"></button>
+            <button class="cell" data-position="2"></button>
+
+            <button class="cell" data-position="3"></button>
+            <button class="cell" data-position="4"></button>
+            <button class="cell" data-position="5"></button>
+
+            <button class="cell" data-position="6"></button>
+            <button class="cell" data-position="7"></button>
+            <button class="cell" data-position="8"></button>
+
+        </section>
+
+
+        <section class="game-actions">
+
+            <button id="new-game" class="new-game-button">
+                🔄 New Game
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="js/game.js"></script>
+
+</body>
+</html>
